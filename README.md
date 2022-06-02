@@ -17,4 +17,14 @@ Para hacernos una idea aproximada, podriamos verlo como una cadena codificada. E
 
 Para formar un JWT necesitamos de los siguientes puntos:
 
-``HEADER.PAYLOAD.SIGNATURE``
+`HEADER.PAYLOAD.SIGNATURE`
+
+<h2> Header </h2>
+El header consta generalmente de dos valores y proporciona información importante sobre el token. Contiene el tipo de token y el algoritmo de la firma y/o cifrado utilizados. Este podría ser un ejemplo de header de un JWT:
+
+
+`{ "alg": "HS256", "typ": "JWT" }`
+
+<h2> Payload </h2>
+El campo payload de JSON Web Token contiene la información real que se transmitirá a la aplicación. Aquí se definen algunos estándares que determinan qué datos se transmiten y cómo. 
+La información se proporciona como pares key/value (clave-valor); las claves se denominan *claims*.
