@@ -27,4 +27,14 @@ El header consta generalmente de dos valores y proporciona información importan
 
 <h2> Payload </h2>
 El campo payload de JSON Web Token contiene la información real que se transmitirá a la aplicación. Aquí se definen algunos estándares que determinan qué datos se transmiten y cómo. 
-La información se proporciona como pares key/value (clave-valor); las claves se denominan *claims*.
+La información se proporciona como pares key/value (clave-valor); las claves se denominan "claims".
+
+**Claims registrados:** Son Claims estandars, vienen ya configurados y dan valores como son, el emisor del token (iss, de issuer), el dominio de destino (aud, de audience) y el tiempo de vencimiento (exp, de expiration time).
+</br> 
+
+**Claims publicos:** Pueden definirse a voluntad, ya que no están sujetos a restricciones.
+</br>
+
+**Claims Privados:** Están destinados a los datos que intercambiamos especialmente con nuestras propias aplicaciones, sin claims más concretos. Por ejemplo, suelen incluir datos como identificación de usuario o nombre de departamento.
+
+</br>
