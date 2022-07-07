@@ -36,5 +36,7 @@ La información se proporciona como pares key/value (clave-valor); las claves se
 </br>
 
 **Claims Privados:** Están destinados a los datos que intercambiamos especialmente con nuestras propias aplicaciones, sin claims más concretos. Por ejemplo, suelen incluir datos como identificación de usuario o nombre de departamento.
-
+Ejemplo de como se podría ver:
 </br>
+`{ "sub": "1", "name": "John", "exp": 50 }`
+
