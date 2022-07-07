@@ -43,7 +43,7 @@ Ejemplo de como se podría ver:
 
 <h2> Firma </h2>
 
-La firma de un JSON Web Token se crea utilizando la codificación Base64 del header y del payload, así como el método de firma o cifrado especificado. La estructura viene definida por JSON Web Signature (JWS), un estándar establecido en el RFC 7515. Para que la firma sea eficaz, es necesario utilizar unaclave secreta que solo conozca la aplicación original. Por un lado, la firma verifica que el mensaje no se ha modificado por el camino. Por otro, si el token está firmado con una clave privada, también garantiza que el remitente del JWT sea el correcto.
+La firma de un JSON Web Token se crea utilizando la codificación Base64 del header y del payload, así como el método de firma o cifrado especificado. Para que la firma sea eficaz, es necesario utilizar unaclave secreta que solo conozca la aplicación original. Por un lado, la firma verifica que el mensaje no se ha modificado por el camino. Por otro, si el token está firmado con una clave privada, también garantiza que el remitente del JWT sea el correcto.
 
 Existen diferentes métodos de firma, dependiendo del nivel de confidencialidad de los datos:
 
@@ -55,3 +55,6 @@ Existen diferentes métodos de firma, dependiendo del nivel de confidencialidad 
 El cifrado crea una secuencia de caracteres aparentemente aleatoria:
 
 `{ 7WK5T79u5mIzjIXXi2oI9Fglmgivv7RAJ7izyj9tUyQ }`
+##
+<h2> ¿Cómo funciona un JSON Web Token?</h2>
+El inicio de sesión de usuario ejemplifica bien la función del JSON Web Token. Antes de utilizar el JWT, hay que establecer una clave secreta. Una vez que el usuario ha introducido correctamente sus credenciales, el JWT se devuelve con la clave y se guarda localmente.
