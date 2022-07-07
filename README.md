@@ -57,4 +57,4 @@ El cifrado crea una secuencia de caracteres aparentemente aleatoria:
 `{ 7WK5T79u5mIzjIXXi2oI9Fglmgivv7RAJ7izyj9tUyQ }`
 ##
 <h2> ¿Cómo funciona un JSON Web Token?</h2>
-El inicio de sesión de usuario ejemplifica bien la función del JSON Web Token. Antes de utilizar el JWT, hay que establecer una clave secreta. Una vez que el usuario ha introducido correctamente sus credenciales, el JWT se devuelve con la clave y se guarda localmente.
+El inicio de sesión de usuario ejemplifica bien la función del JSON Web Token. Antes de utilizar el JWT, hay que establecer una clave secreta. Una vez que el usuario ha introducido correctamente sus credenciales, el JWT se devuelve con la clave y se guarda localmente. De esta manera, cada vez que el usuario accede a recursos protegidos, como a una API o a una ruta protegida, el user agent utiliza el JWT. La otra parte puede descifrar el JSON Web Token y ejecutar la solicitud si la verificación se realiza correctamente.
