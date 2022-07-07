@@ -47,9 +47,11 @@ La firma de un JSON Web Token se crea utilizando la codificación Base64 del hea
 
 Existen diferentes métodos de firma, dependiendo del nivel de confidencialidad de los datos:
 
-Sin protección: como hemos mencionado, si los datos no requieren un nivel de protección alto, puede especificarse el valor none en el header. En este caso, no se genera ninguna firma y el JWT solo constará de header y payload. Sin esta medida de protección, el payload puede leerse como texto en claro una vez descifrado el código Base64 y no se comprueba si el mensaje procede del remitente correcto o si fue modificado al transferirse.
-Firma (JWS): por lo general, basta con comprobar si los datos provienen del remitente correcto y si han sido modificados. Para ello, se utiliza el esquema JSON Web Signature (JWS), que garantiza que el mensaje no se haya cambiado por el camino y proceda del remitente correcto. Con este procedimiento, el payload también puede leerse como texto en claro tras el descifrado de Base64.
-Firma (JWS) y cifrado (JWE): además de JWS, es posible emplear JSON Web Encryption (JWE). JWE cifra el contenido del payload, que luego se firma con JWS. Para descifrar el contenido, se indica una contraseña común o una clave privada. De este modo, el remitente se verifica, el mensaje es confidencial y se autentifica, y el payload no puede leerse como texto en claro tras el descifrado de Base64.
+**Sin protección**: como hemos mencionado, si los datos no requieren un nivel de protección alto, puede especificarse el valor none en el header. En este caso, no se genera ninguna firma y el JWT solo constará de header y payload. Sin esta medida de protección, el payload puede leerse como texto en claro una vez descifrado el código Base64 y no se comprueba si el mensaje procede del remitente correcto o si fue modificado al transferirse.
+
+**Firma (JWS)**: por lo general, basta con comprobar si los datos provienen del remitente correcto y si han sido modificados. Para ello, se utiliza el esquema JSON Web Signature (JWS), que garantiza que el mensaje no se haya cambiado por el camino y proceda del remitente correcto. Con este procedimiento, el payload también puede leerse como texto en claro tras el descifrado de Base64.
+
+**Firma (JWS) y cifrado (JWE)**: además de JWS, es posible emplear JSON Web Encryption (JWE). JWE cifra el contenido del payload, que luego se firma con JWS. Para descifrar el contenido, se indica una contraseña común o una clave privada. De este modo, el remitente se verifica, el mensaje es confidencial y se autentifica, y el payload no puede leerse como texto en claro tras el descifrado de Base64.
 El cifrado crea una secuencia de caracteres aparentemente aleatoria:
 
 `{ 7WK5T79u5mIzjIXXi2oI9Fglmgivv7RAJ7izyj9tUyQ }`
